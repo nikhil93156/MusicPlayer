@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#7A87D3"
+        android:layout_height="match_parent"
+        tools:context=".Playlist">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C836E1"
+            app:title="Playlist"
+            android:id="@+id/tb"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_of_the_song"
+            android:singleLine="true"
+            android:layout_below="@+id/tb"
+            android:textSize="20sp"
+            android:padding="20dp"
+            android:layout_margin="2dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/title"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/music"
+            android:layout_width="216dp"
+            android:layout_height="208dp"
+            android:layout_above="@+id/controls"
+            android:layout_marginBottom="12dp"
+            android:importantForAccessibility="no"
+            android:padding="20dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/headphonespng" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/controls"
+            android:padding="40dp">
+
+            <SeekBar
+                android:id="@+id/sk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/white" />
+
+            <TextView
+                android:id="@+id/current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sk"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/_0_00"
+                android:textColor="#212121" />
+
+            <TextView
+                android:id="@+id/total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sk"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="0:00"
+                android:textColor="#212121" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_time"
+                android:padding="20dp">
+
+                <ImageButton
+                    android:id="@+id/previous"
+                    android:background="#DF1212"
+                    android:layout_width="44dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_skip_previous_24" />
+
+                <ImageButton
+                    android:id="@+id/next"
+                    android:layout_width="44dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="#DF1212"
+                    android:src="@drawable/baseline_skip_next_24"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageButton
+                    android:id="@+id/pauseplay"
+                    android:layout_width="76dp"
+                    android:layout_height="41dp"
+                    android:layout_centerInParent="true"
+                    android:background="#DF1212"
+                    android:src="@drawable/baseline_pause_circle_outline_24" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
